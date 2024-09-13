@@ -3,8 +3,10 @@ import { ref } from "vue"
 const value1 = ref("");
 const value2 = ref("");
 
-const handleBlurValue1 = (() => {
+const handleBlurValue1 = ((e: Event) => {
+  const target = e.target as HTMLInputElement;
   value1.value = value1.value.toUpperCase();
+  alert(`[handleBlurValue1]: ${target.value}`)
 })
 
 const handleBlurValue2 = (() => {
@@ -14,7 +16,10 @@ const handleBlurValue2 = (() => {
 const handleTouchStart = ((event: Event) => {
   const target = event.target as HTMLInputElement;
   event.preventDefault();
-  target.focus()
+  alert(`[handleTouchStart]: ${target.value}`)
+  setTimeout(() => {
+    target.focus()
+  }, 0)
 })
 
 </script>
