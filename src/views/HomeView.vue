@@ -25,6 +25,7 @@ const handleTouchStart = ((event: Event) => {
 </script>
 
 <template>
+  {{ `更新回数: ${6}回目` }}
   <main>
     <div>
       <label>value1:</label>
