@@ -6,7 +6,7 @@ const value2 = ref("");
 const handleBlurValue1 = ((e: Event) => {
   const target = e.target as HTMLInputElement;
   value1.value = value1.value.toUpperCase();
-  value1.value && alert(`[handleBlurValue1]: ${target}`)
+  // value1.value && alert(`[handleBlurValue1]: ${target}`)
 })
 
 const handleBlurValue2 = (() => {
@@ -15,14 +15,13 @@ const handleBlurValue2 = (() => {
 
 const handleTouchStart = ((event: Event) => {
   const target = event.target as HTMLInputElement;
-  alert(`[handleTouchStart]: ${target.outerHTML}`)
   target.focus()
 })
 
 </script>
 
 <template>
-  {{ `更新回数: ${7}回目` }}
+  {{ `更新回数: ${8}回目` }}
   <main>
     <div>
       <label>value1:</label>
