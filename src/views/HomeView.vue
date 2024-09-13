@@ -15,7 +15,6 @@ const handleBlurValue2 = (() => {
 
 const handleTouchStart = ((event: Event) => {
   const target = event.target as HTMLInputElement;
-  event.preventDefault();
   alert(`[handleTouchStart]: ${target.outerHTML}`)
   setTimeout(() => {
     alert(`[focus]:`)
