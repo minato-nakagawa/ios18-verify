@@ -16,16 +16,13 @@ const handleBlurValue2 = (() => {
 const handleTouchStart = ((event: Event) => {
   const target = event.target as HTMLInputElement;
   alert(`[handleTouchStart]: ${target.outerHTML}`)
-  setTimeout(() => {
-    alert(`[focus]:`)
-    target.focus()
-  }, 3000)
+  target.focus()
 })
 
 </script>
 
 <template>
-  {{ `更新回数: ${6}回目` }}
+  {{ `更新回数: ${7}回目` }}
   <main>
     <div>
       <label>value1:</label>
