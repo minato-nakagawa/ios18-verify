@@ -6,7 +6,7 @@ const value2 = ref("");
 const handleBlurValue1 = ((e: Event) => {
   const target = e.target as HTMLInputElement;
   value1.value = value1.value.toUpperCase();
-  alert(`[handleBlurValue1]: ${target.value}`)
+  value1.value && alert(`[handleBlurValue1]: ${target}`)
 })
 
 const handleBlurValue2 = (() => {
@@ -16,10 +16,11 @@ const handleBlurValue2 = (() => {
 const handleTouchStart = ((event: Event) => {
   const target = event.target as HTMLInputElement;
   event.preventDefault();
-  alert(`[handleTouchStart]: ${target.value}`)
+  alert(`[handleTouchStart]: ${target.outerHTML}`)
   setTimeout(() => {
+    alert(`[focus]:`)
     target.focus()
-  }, 0)
+  }, 3000)
 })
 
 </script>
