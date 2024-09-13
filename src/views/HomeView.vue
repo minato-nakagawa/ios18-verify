@@ -21,7 +21,7 @@ const handleTouchStart = ((event: Event) => {
 </script>
 
 <template>
-  {{ `更新回数: ${8}回目` }}
+  {{ `更新回数: ${9}回目` }}
   <main>
     <div>
       <label>value1:</label>
@@ -35,6 +35,14 @@ const handleTouchStart = ((event: Event) => {
     <div>
       <label>value2:</label>
       <input v-model="value2" type="text" :tabindex="1" @blur="handleBlurValue2" @touchstart="handleTouchStart" />
+    </div>
+    <div>
+      <label>value3:</label>
+      <input type="text" :tabindex="1" />
+    </div>
+    <div>
+      <label>value4:</label>
+      <input type="text" />
     </div>
   </main>
 </template>
