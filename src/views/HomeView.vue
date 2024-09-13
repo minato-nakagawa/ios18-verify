@@ -11,13 +11,20 @@ const handleBlurValue2 = (() => {
   value2.value = value2.value.toUpperCase();
 })
 
+const handleTouchStart = ((event: Event) => {
+  const target = event.target as HTMLInputElement;
+  event.preventDefault();
+  target.focus()
+})
+
 </script>
 
 <template>
   <main>
     <div>
       <label>value1:</label>
-      <input v-model="value1" type="text" maxlength="11" :tabindex="1" @blur="handleBlurValue1" />
+      <input v-model="value1" type="text" maxlength="11" :tabindex="1" @blur="handleBlurValue1"
+        @touchstart="handleTouchStart" />
     </div>
     <div>
       <label>valueX:</label>
@@ -25,7 +32,7 @@ const handleBlurValue2 = (() => {
     </div>
     <div>
       <label>value2:</label>
-      <input v-model="value2" type="text" :tabindex="1" @blur="handleBlurValue2" />
+      <input v-model="value2" type="text" :tabindex="1" @blur="handleBlurValue2" @touchstart="handleTouchStart" />
     </div>
   </main>
 </template>
