@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue"
+import { useRouter } from "vue-router";
 const value1 = ref("");
 const value2 = ref("");
+const router = useRouter()
 
 const handleBlurValue1 = ((e: Event) => {
   const target = e.target as HTMLInputElement;
@@ -21,7 +23,7 @@ const handleTouchStart = ((event: Event) => {
 </script>
 
 <template>
-  {{ `更新回数: ${10}回目` }}
+  {{ `更新回数: ${11}回目` }}
   <main>
     <div>
       <label>value1:</label>
@@ -44,6 +46,7 @@ const handleTouchStart = ((event: Event) => {
       <label>value4:</label>
       <input type="text" />
     </div>
+    <button @click="router.push('pass')">AAA</button>
   </main>
 </template>
 
